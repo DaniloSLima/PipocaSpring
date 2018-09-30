@@ -35,9 +35,10 @@ public class Filme implements Serializable{
 	private String posterPath;
 	
 	private String diretor;
-	
-	@ManyToOne //Indicando qual o tipo de relacionamento entre genero e filme
-	@JoinColumn(name="id_genero") //Indicando qual a coluna que possui a chave estrangeira em filme que se relaciona com a chave primaria em genero
+	//Indicando qual o tipo de relacionamento entre genero e filme
+	@ManyToOne 
+	//Indicando qual a coluna que possui a chave estrangeira em filme que se relaciona com a chave primaria em genero
+	@JoinColumn(name="id_genero") 
 	private Genero genero;
 	
 	public int getId() {
